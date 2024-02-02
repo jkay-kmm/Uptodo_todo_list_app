@@ -47,7 +47,6 @@ class OnboardingChildPage extends StatelessWidget {
           child: Text(
             "SKIP",
               style: TextStyle(fontSize: 16,
-                  fontFamily: "Lato",
                   fontWeight: FontWeight.w400,
                   color: Colors.white.withOpacity(0.44), // 44% tuong duong voi 0.44
               ),
@@ -125,7 +124,6 @@ class OnboardingChildPage extends StatelessWidget {
               color: Colors.white.withOpacity(0.87),
               fontSize: 32,
               fontWeight: FontWeight.bold,
-              fontFamily: "Lato",
 
             ),
             textAlign: TextAlign.center,
@@ -139,7 +137,6 @@ class OnboardingChildPage extends StatelessWidget {
             style: TextStyle(
             color: Colors.white.withOpacity(0.87),
             fontSize: 16,
-            fontFamily: "Lato",
           ),
             textAlign: TextAlign.center,
           ),
@@ -162,7 +159,6 @@ class OnboardingChildPage extends StatelessWidget {
                 "BACK",
               style: TextStyle(
                 fontSize: 16,
-                fontFamily: "Lato",
                 color: Colors.white.withOpacity(0.44),
               ),
               ),
@@ -184,7 +180,6 @@ class OnboardingChildPage extends StatelessWidget {
                     : "NEXT",
                style: const TextStyle(
                fontSize: 16,
-                 fontFamily: "Lato",
                  color: Colors.white
                  ),
                ),

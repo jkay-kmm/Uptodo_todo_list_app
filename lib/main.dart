@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:todo_list_app/ui/login/login_page.dart';
 import 'package:todo_list_app/ui/onboarding/onboarding_page_view.dart';
 import 'package:todo_list_app/ui/welcome/welcome_page.dart';
 
@@ -18,8 +20,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      home: const OnboardingPageView(
+      home: const LoginPage(
 
       )
     );
