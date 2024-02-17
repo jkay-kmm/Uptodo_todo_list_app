@@ -1,7 +1,11 @@
+
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+  final bool isFirstTimeInstallApp;
+  const WelcomePage({super.key,
+  required this.isFirstTimeInstallApp});
 
   @override
   Widget build(BuildContext context) {
@@ -9,20 +13,23 @@ class WelcomePage extends StatelessWidget {
       backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: IconButton(
+        leading:isFirstTimeInstallApp ? IconButton(
           onPressed: (){
-            Navigator.pop(context);
+            if(Navigator.canPop(context)){
+              Navigator.pop(context);
+            }
           },
           icon: const Icon(
             Icons.arrow_back_ios_new_outlined,
             size: 18,
             color: Colors.white,),
-        ),
+        ):null
       ),
       body: Column(
         children: [
           _buildTitleAndDesc(),
           const Spacer(),
+          _buildButtonChangeLanguage(context),
           _buildButtonLogin(),
           _buildButtonRegister(),
         ],
@@ -38,7 +45,7 @@ class WelcomePage extends StatelessWidget {
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              "Welcome to UpTodo",
+              "welcome_title".tr(),
               style: TextStyle(
                 color: Colors.white.withOpacity(0.87),
                 fontSize: 32,
@@ -53,7 +60,7 @@ class WelcomePage extends StatelessWidget {
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              "Please login to your account or create new account to continue",
+              "welcome_desc".tr(),
               style: TextStyle(
                 color: Colors.white.withOpacity(0.67),
                 fontSize: 16,
@@ -64,6 +71,39 @@ class WelcomePage extends StatelessWidget {
           ),
 
         ],
+      ),
+    );
+  }
+  Widget _buildButtonChangeLanguage(BuildContext context){
+    return Container(
+      width: double.infinity,
+      height: 48,
+      padding:const EdgeInsets.symmetric(horizontal: 24),
+      margin: const EdgeInsets.only(top: 20),
+      child: ElevatedButton(
+        onPressed: (){
+          //lay ra locale hien tai
+          final  currentLocale = context.locale.toString();
+          if(currentLocale == "en"){
+            context.setLocale(const Locale("vi"));
+          }else {
+            context.setLocale(const Locale("en"));
+          }
+        },
+        style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF8875FF),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+            )
+        ),
+        child:  const  Text(
+          "Đổi ngôn ngữ",
+          style:  TextStyle(
+              fontSize: 16,
+              fontFamily: "Lato",
+              color: Colors.white
+          ),
+        ),
       ),
     );
   }
