@@ -8,5 +8,9 @@
   "create_category_form_category_icon_label": "Category icon:",
   "create_category_form_category_icon_placeholder": "Choose icon from library",
   "create_category_form_category_background_color_label": "Category color",
-  "create_category_create_button": "Create button"
+  "create_category_create_button": "Create button",
+  "create_task_form_name_label": "Add task",
+  "create_task_form_name_placeholder" : "Enter task name here",
+  "create_task_form_desc_label": "Description",
+  "create_task_form_desc_placeholder" : "Enter task description here"
 }

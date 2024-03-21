@@ -128,7 +128,7 @@ class _CreateOrEditCategoryState extends State<CreateOrEditCategory> {
           ),
           GestureDetector(
             onTap: (){
-              print("Hello: Chon icon tu 1 man hinh khac");
+              _chooseIcon();
             },
             child: Container(
               margin: const EdgeInsets.only(top: 10),
@@ -254,5 +254,8 @@ class _CreateOrEditCategoryState extends State<CreateOrEditCategory> {
   void _onHandleCreateCategory(){
     final categoryName = _nameCategoryTextController.text;
     print(categoryName);
+  }
+  void _chooseIcon(){
+    // CupertinoIconThemeData
   }
 }

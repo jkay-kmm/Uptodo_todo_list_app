@@ -1,12 +1,17 @@
 {
-  "common_cancel":"Cancel",
+  "common_cancel":"Thử lại",
   "welcome_title": "Chào mừng đến với AppTodo",
   "welcome_desc" : "Vui lòng đăng nhập vào tài khoản của bạn hoặc tạo tài khoản mới để kết thúc ",
-  "create_category_page_title": "Create new category",
-  "create_category_form_category_name_label": "Category name:",
-  "create_category_form_category_name_placeholder": "Category name",
-  "create_category_form_category_icon_label": "Category icon:",
-  "create_category_form_category_icon_placeholder": "Choose icon from library",
-  "create_category_form_category_background_color_label": "Category color",
-  "create_category_create_button": "Create button"
+  "create_category_page_title": "Tạo danh mục mới",
+  "create_category_form_category_name_label": "Tên danh mục:",
+  "create_category_form_category_name_placeholder": "Tên danh mục",
+  "create_category_form_category_icon_label": "Icon danh mục:",
+  "create_category_form_category_icon_placeholder": "Chọn icon từ thư viện ",
+  "create_category_form_category_background_color_label": "Màu nền danh mục",
+  "create_category_create_button": "Tạo nút ",
+  "create_task_form_name_label": "Thêm nhiệm vụ",
+  "create_task_form_name_placeholder" : "Nhập tên tiêu đề vào đây",
+  "create_task_form_desc_label": "Thêm miêu tả",
+  "create_task_form_desc_placeholder" : "Nhập miêu tả  vào đây"
+
 }
